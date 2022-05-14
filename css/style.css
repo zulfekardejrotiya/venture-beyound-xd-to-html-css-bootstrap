@@ -1,0 +1,1277 @@
+/********************************************  reset *******************************************/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+
+/********************************************** fonts  *****************************************/
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-Black.ttf);
+    font-style:normal ;
+    font-weight:800;
+}
+
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-Bold.ttf);
+    font-style:normal ;
+    font-weight:700;
+}
+
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-Semibold.ttf);
+    font-style:normal ;
+    font-weight:600;
+}
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-Medium.ttf);
+    font-style:normal ;
+    font-weight:500;
+}
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-Regular.ttf);
+    font-style:normal ;
+    font-weight:400;
+}
+@font-face {
+    font-family: 'graphic';
+    src: url(../graphic-fonts/Graphik-light.ttf);
+    font-style:normal ;
+    font-weight:300;
+}
+
+/********************************************** body  *****************************************/
+
+body{
+    font-family: graphic;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/********************************************** img  *****************************************/
+
+img{
+    max-width: 100%;
+}
+
+/********************************************** color code *****************************************/
+
+:root{
+    --primary:#272A30;
+    --main-yellow:#FFC008;
+    --ternary:#2E3238;
+    --main-white: #FFFFFF;
+    --light-dark:#9FA2A8;
+    --main-black:#202327;
+}
+
+/********************************************** font-size *****************************************/
+
+.hero-title{
+   font-family: graphic;
+   font-weight: 800;
+   font-size: 58px;
+   line-height: 70px;
+   color: var(--main-white);
+}
+
+.block-hint{
+   font-size: 16px;
+   color: var(--main-yellow);
+   font-weight: 400;
+   line-height: 86px;
+}
+
+.block-title{
+   font-size: 1.5rem;
+   line-height:2rem;
+   color: var(--main-white);
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+
+.block-description{
+   font-size: 20px;
+   color: var(--main-white);
+   font-weight: 300;
+   line-height: 37px;
+}
+
+/********************************************** button *****************************************/
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.25rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+.btn-1{
+    background-color: var(--main-black);
+    color: var(--main-yellow);
+    border: 2px solid var(--main-yellow);
+    border-radius: 2px;
+}
+.btn-1:hover{
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+/********************************************** containet *****************************************/
+
+.container{
+    max-width: 1120px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+/********************************************************  start header ************************************************/
+
+.main-header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: var(--main-black);
+}
+.sticky{
+    padding-bottom: 1.5rem;
+    background-color: var(--main-black);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.navbar{
+    position: relative;
+}
+.navbar-brand {
+    padding-top: 2.3rem;
+}
+.nav-wrap .nav-item{
+    padding: 2.3rem 2rem 0 0;
+}
+.nav-item .nav-link{
+    padding-top: 1.2rem;
+}
+.nav-item a{
+    color: var(--main-white);
+    font-family:graphic;
+    line-height: 21px;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.nav-item a:hover{
+    color: var(--main-yellow);
+}
+.nav-item a:focus{
+    color: var(--main-yellow);
+}
+.navbar-toggler:focus
+ {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-toggler {
+    padding-top: 2.5rem;
+}
+
+.navbtn a{
+    display: none;
+}
+.nav-img{
+    display: none;
+}
+/********************************************************  end header ************************************************/
+
+/********************************************************  start hp hero ************************************************/
+.hp-hero-section{
+    min-height: 640px;
+    background-color: var(--main-black);
+    position:relative;
+}
+.hero-wrapper{
+    padding-top: 200px;
+}
+.left-hero .block-hint{
+    font-weight: 500;
+}
+.left-hero .hero-title span{
+    color: var(--main-yellow);
+}
+.right-hero{
+    position: relative;
+}
+
+.hero-title .text-stroke-white:first-child{
+    -webkit-text-fill-color:transparent;
+    color: var(--main-white);
+    -webkit-text-stroke-width:1.2px;
+}
+.down-arrow{
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.hero-bounce {
+    animation-name: hero-bounce;
+    animation-timing-function: ease;
+}
+@keyframes hero-bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+.right-scroll .right-arrow{
+    width: 3.5rem;
+    height: 0.125rem;
+    color: var(--main-white);
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.hero-wrapper .right-scroll {
+    position: absolute;
+    top:50%;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+}
+.right-scroll .block-description{
+    font-size:16px;
+    line-height: 77px;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+/********************************************************  end hp hero ************************************************/
+
+  /******************************************************** start who we are ************************************************/
+
+.hp-who-we-are-section{
+    background-color: var(--main-black);
+    min-height: 650px;
+    padding: 5rem 0rem;
+    position: relative;
+}
+
+.right-who-we-are .block-description{
+    max-width: 480px;
+    line-height: 37px;
+}
+.line-hint .line-arrow{
+    width:80px;
+    height:1.6px;
+    background-color: var(--main-yellow);
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.line-hint {
+    display: flex;
+    align-items: center;
+}
+/********************************************************  end  who we are************************************************/
+
+/******************************************************** start mobile group **********************************************/
+
+.hp-mobile-group{
+    min-height: 650px;
+    padding: 5rem 0rem;
+    position: relative;
+    background-color: var(--main-black);
+}
+.mobile-group-wrapper  {
+    margin: 0 auto;
+}
+.left-mobile-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.left-mobile-grp .block-description{
+    width: 350px;
+    line-height: 46px;
+}
+.right-mobile-grp {
+    position: relative;
+    /* right: -200px; */
+}
+
+.mobile-group-wrapper .line-hint .line-arrow{
+    width:2px;
+    height:73px;
+    background-color: var(--main-yellow);
+    top: 10%;
+    position: absolute;
+}
+.right-mobile-grp1{
+    display: none;
+}
+/******************************************************** end mobile group **********************************************/
+
+/*************************************************** start our service section ******************************************/
+
+.our-services-section{
+    min-height: 650px;
+    padding: 5rem 0rem;
+    position: relative;
+    background-color: var(--main-black);
+    z-index: 1;
+}
+.my-services-Swiper .swiper-slide{
+    position: relative;
+    background-color: var(--primary);
+    padding: 1.2rem 0.9rem;
+}
+.my-services-Swiper .swiper-slide .block-description{
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--light-dark);
+}
+
+.my-services-Swiper .swiper-slide .line-hint .line-arrow{
+    width: 27px;
+    height: 2px;
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+    color:var(--main-yellow) !important;
+    z-index: -1;
+} */
+
+.our-services-section .swiper-pagination {
+    position: absolute;
+    top: 85%;
+    z-index: -1;
+}
+.our-services-section .swiper-pagination-bullet-active {
+    background-color: var(--main-yellow) !important;
+}
+/*************************************************** end our service section ******************************************/
+
+/*************************************************** start our featured section ******************************************/
+
+.our-featured-section{
+    min-height: 650px;
+    padding-bottom: 5rem;
+    position: relative;
+    background-color: var(--primary);
+}
+
+.featured-number{
+    -webkit-text-fill-color:var(--main-black);
+    color: var(--main-white);
+    -webkit-text-stroke-width:1.5px;
+    font-size: 64px;
+    height: 86px;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    margin-right: 1rem;
+}
+
+.featured-img-text-box .block-title{
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 86px;
+}
+
+.featured-img-text-box .block-description{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--light-dark);
+    margin-top: -1rem;
+}
+.featured-img-text-box a{
+    color: var(--main-yellow);
+    background: transparent;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.3s;
+    border-bottom: 3px solid none;
+    font-weight: 600;
+}
+.featured-img-text-box a img{
+    margin-left: 1rem;
+}
+.featured-img-text-box a:hover{
+    border-bottom: 2.2px solid var(--main-yellow);
+}
+
+.left-featured:nth-child(3){
+    margin-top: 4rem;
+}
+.right-featured:nth-child(2){
+    margin-top: 10rem;
+}
+.right-featured:nth-child(4){
+    margin-top: 15rem;
+}
+/*************************************************** end our featured section ******************************************/
+
+/*************************************************** start customer section ******************************************/
+.customer-section{
+    min-height: 550px;
+    padding: 8rem 0rem;
+    position: relative;
+    background-color: var(--main-black);
+}
+.customer-text span{
+    color: var(--main-yellow);
+}
+
+ .customer-text{
+    margin: 0 auto;
+    text-align: center;
+    color: var(--main-white);
+    line-height: 44px;
+    font-size: 20px;
+    max-width: 742px;
+}
+.customer-name{
+    color: var(--light-dark);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+/*************************************************** end customer section ******************************************/
+
+/*************************************************** start form section ******************************************/
+.form-section{
+    min-height: 780px;
+    padding: 5rem 0rem;
+    position: relative;
+    background-color: var(--main-yellow);
+}
+.form-section .hero-title{
+    color: var(--main-black);
+}
+.form-wrapper .form-control{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--main-black);
+    border-radius: 2px solid var(--main-black);
+    background: transparent;
+}
+.form-wrapper .form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+ input[type=text]{
+    color:var(--main-black);
+    font-size: 20px;
+    background-color:transparent;
+    font-family: graphic;
+}
+textarea[type=text]{
+    color:var(--main-black);
+    font-size: 20px;
+    background-color:transparent;
+    font-family: graphic;
+}
+.form-control::placeholder  {
+    color:var(--main-black);
+    font-size: 20px;
+    background-color:transparent;
+    font-family: graphic;
+}
+.submit-btn .btn-2{
+    border-radius: 100%;
+    background-color: var(--main-black);
+    color: var(--main-yellow);
+    width: 170px;
+    height: 170px;
+}
+.submit-btn .btn-2:hover{
+    color: var(--main-yellow);
+    width: 180px;
+    height: 180px;
+}
+.form-wrapper .submit-btn{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/**************** thank you section **************/
+.thankyou-section{
+    min-height: 765px;
+    position: relative;
+    background-color:var(--main-yellow);
+    z-index: -1;
+}
+
+.thankyou-hero-wrapper .hero-title {
+    color: var(--main-black);
+}
+.thankyou-section .hero-description{
+    color: var(--main-black);
+}
+.thanks-header{
+    background-color: var(--main-yellow);
+}
+
+
+.thanks-header .nav-item a{
+    color: var(--main-black);
+}
+.thanks-header .nav-item a:hover{
+    color: var(--main-white);
+}
+
+.thanks-header  .btn-1{
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+    border: 2px solid var(--main-black);
+    border-radius: 2px;
+}
+.thanks-header .btn-1:hover{
+    /* background-color:var(--main-yellow); */
+    color: var(--main-White);
+    /* border: 2px solid var(--main-white); */
+}
+.thanks-header .btn{
+    transition: 00.3s;
+}
+
+/*************************************************** end form section ******************************************/
+
+/*************************************************** start footer section ******************************************/
+
+.footer-section{
+    min-height: 450px;
+    padding: 5rem 0rem;
+    position: relative;
+    background-color: var(--main-white);
+}
+.footer-wrapper .block-title{
+    color: var(--main-black);
+    font-size: 38px;
+    font-weight: 700;
+}
+.footer-wrapper ul li a{
+    font-size: 20px;
+    color: var(--light-dark);
+    line-height: 42px;
+    transition: 0.3s;
+}
+.footer-wrapper ul li a:hover{
+    color: var(--main-black);
+}
+.footer-wrapper ul li {
+    font-size: 20px;
+    color: var(--light-dark);
+    line-height: 42px;
+}
+.social-media2{
+    display: none;
+}
+ol, ul {
+    padding-left: 0rem;
+}
+
+/*************************************************** end footer section ******************************************/
+
+/*************************************************** start about section section
+            ******************************************************************** ******************************************/
+
+/*************************************************** start about hp-hero section ******************************************/
+.hp-hero-about-section{
+        min-height:918px;
+        background-color: var(--main-black);
+        position:relative;  
+        z-index:1;
+}
+
+.about-hero-wrapper{
+    padding-top: 200px;
+}
+
+.about-hero-wrapper .hero-title{
+    font-size: 50px;
+    font-weight:400;
+    line-height: 73px;
+    width: 690px;
+}
+.about-hero-wrapper .hero-title span{
+    color: var(--main-yellow);
+}
+
+.about-hero-wrapper .right-scroll {
+    position: absolute;
+    top:45%;
+    right: 190px;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+/*************************************************** end about hp-hero section ******************************************/
+
+/*************************************************** start about our-service section ******************************************/
+.about-service-section{
+    min-height:1050px;
+    background-color: var(--primary);
+    position:relative; 
+    z-index: 1; 
+}
+
+.middle-img-box img{
+    margin-top: -200px;
+}
+.right-about-service{
+    padding-left: 50px;
+    
+}
+.right-about-service .block-description{
+    padding: 200px 0 50px 0;
+    line-height: 48px;
+    font-size: 22px;
+    max-width: 610px;
+}
+.right-about-service a{
+    color: var(--main-yellow);
+    background: transparent;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.3s;
+    border-bottom: 3px solid none;
+    font-weight: 400;
+}
+.right-about-service a img{
+    margin-left: 1rem;
+}
+.right-about-service a:hover{
+    border-bottom: 2.2px solid var(--main-yellow);
+}
+/*************************************************** end about our-service section ******************************************/
+
+/*************************************************** start our team section ******************************************/
+
+.about-our-team-section{
+    min-height:780px;
+    padding: 5rem 0;
+    background-color: var(--primary);
+    position:relative; 
+    z-index: 1;
+}
+
+.our-team-wrapper .card {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.our-team-wrapper .card .card-title,.card-text{
+    color: var(--main-white);
+    margin-right: 1rem;
+}
+.our-team-wrapper .card .card-body{
+    margin-left: -15px;
+}
+/*************************************************** end  our team section ******************************************/
+
+
+ /*************************************************** end about section section
+            ******************************************************************** ******************************************/
+
+/*************************************************** start services section section
+            ******************************************************************** ******************************************/
+
+
+
+/************************************************* start services hp-hero section ******************************************/
+
+.hp-hero-services-section{
+    min-height:728px;
+    background-color: var(--main-black);
+    position:relative;  
+    z-index:1;
+    padding: 5rem 0;
+}
+.hero-description{
+   font-size: 20px;
+   color: var(--main-white);
+   font-weight: 300;
+   line-height: 37px;
+   max-width: 495px;
+   margin: 0 auto;
+}
+.services-hero-wrapper .right-scroll {
+    position: absolute;
+    top:50%;
+    right: -320px;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+}
+.left-service-hero-circle{
+    position: absolute;
+    top: 20%;
+    left: -12%;
+}
+
+/************************************************* start services hp-hero section ******************************************/
+
+/************************************************* start services hp-advert section ******************************************/
+.hp-hero-advert-section{
+    min-height:728px;
+    background-color: var(--main-black);
+    position:relative;  
+    z-index:1;
+    padding-bottom: 5rem;
+}
+.accordion-button:not(.collapsed){
+    background-color: var(--ternary);   
+}
+.accordion-button{
+    background-color: var(--ternary); 
+}
+.accordion-button:focus{
+    background-color: var(--ternary);
+    color: var(--main-white);
+    border-bottom: 1px solid var(--main-black);
+    box-shadow: none;
+}
+.accordion-item{
+    background-color: var(--ternary);
+    color: var(--main-white);
+}
+.accordion-item{
+    padding: 0 5rem;
+}
+
+.accordion-number .info-title-box{
+    display:flex;
+    padding: 1rem 0;
+}
+.accordion-number .info-number{
+    padding-top: 0.5rem;
+}
+.accordion-number .info-number .number{
+    -webkit-text-fill-color:var(--main-black);
+    color: var(--main-white) !important;
+    -webkit-text-stroke-width:1px;
+    font-size: 55px;
+    height: 86px;
+    font-weight: 700;
+}
+
+
+.accordion-number .info-box-title {
+    color: var(--main-white) !important;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 86px;
+    margin-left: 2rem;
+}
+.accordion-number .line-hint {
+    margin-left: 3rem;
+}
+
+
+.accordion-body p{
+    max-width: 550px;
+    line-height: 37px;
+}
+
+.list-group-flush li{
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+    color: var(--main-white);
+}
+
+.accordion-collapse {
+    border: 0;
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+.accordion-button:not(.collapsed) {
+    background: none;
+    color: var(--main-yellow);
+    box-shadow: none;
+    border-bottom: none;
+   
+}
+.accordion-button::after {
+    width: auto;
+    height: auto;
+    content: "DISCOVER  +";
+    font-size:16px;
+    background-image: none;
+    font-weight: 400;
+    color:var(--main-yellow);
+    transform: translateY(-2px);
+}
+.accordion-button:not(.collapsed)::after {
+    width: auto;
+    height: auto;
+    background-image: none;
+    content: "CLOSE   -";
+    font-size:16px;
+    font-weight: 400;
+    transform: translate(-5px, -4px);
+    transform: rotate(0deg);
+}
+.mobile-responsive-box{
+    display: none;
+}
+.accordion-body {
+    padding:  0rem;
+}
+.body-border-bottom{
+    border: 0.1px solid var(--light-dark);
+    margin-bottom:4rem;
+}
+/************************************************* start services hp-advert section ******************************************/
+
+
+/*************************************************** end services section section
+            ******************************************************************** ******************************************/
+
+
+/*************************************************** start case studies section section
+            ******************************************************************** ******************************************/
+
+
+/************************************************* start navbar studies hp-hero section *************************************/
+.case-nav-item a{
+    color: var(--main-black);
+}
+.case-btn{
+    background: transparent;
+}
+
+/************************************************* start navbar studies hp-hero section **************************************/
+/********* start case header **************/
+.case-header{
+    background-color: var(--main-white);
+}
+
+
+.case-header .nav-item a{
+    color: var(--main-black);
+}
+.case-header .nav-item a:hover{
+    color: var(--main-yellow);
+}
+
+.case-header  .btn-1{
+    background-color:transparent;
+    color: var(--main-black);
+    border: 2px solid var(--main-yellow);
+    border-radius: 2px;
+}
+.case-header .btn-1:hover{
+    /* background-color:var(--main-yellow); */
+    color: var(--main-White);
+    /* border: 2px solid var(--main-white); */
+}
+.case-header .btn{
+    transition: 00.3s;
+}
+/********* end case header ***************/
+/************************************************* start case studies hp-hero section ******************************************/
+.hp-hero-case-studies-section{
+    min-height: 640px;
+    position: relative;
+    background-color: var(--main-white);
+}
+
+.case-studies-hero-wrapper .hero-title{
+   color: var(--main-black);
+}
+.case-studies-hero-wrapper .case-hero-description{
+    color: var(--light-dark);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 37px;
+    width: 600px;
+}
+.case-studies-hero-wrapper .right-scroll .block-description{
+    color: var(--main-black);
+    font-weight: 400;
+}
+.case-studies-hero-wrapper .down-arrow{
+    display: none;
+}
+/************************************************* start hp-hero-case-studies section ******************************************/            
+.case-studies-featured-section{
+    min-height:728px;
+    background-color: var(--main-white);
+    position:relative;  
+    z-index:1;
+ }
+
+
+ .case-studies-hero-wrapper .right-scroll {
+    position: absolute;
+    top:30%;
+    right: -280px;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+}
+/************************************************* end hp-hero-case-studies section ******************************************/
+
+/************************************************* start case studies featured section ******************************************/
+.case-studies-featured .left-featured:nth-child(3){
+    margin-top: 0rem;
+}
+.case-studies-featured .right-featured:nth-child(2){
+    margin-top: 0rem;
+}
+.case-studies-featured .right-featured:nth-child(4){
+    margin-top: 0rem;
+}
+
+.case-studies-featured .featured-img-text-box a{
+    color: var(--main-black);
+}
+.case-studies-featured .featured-img-text-box a:hover{
+    border-bottom: 2.2px solid var(--main-black);
+}
+.case-studies-featured .block-title{
+    color: var(--main-black);
+}
+
+.case-studies-featured .featured-number{
+    -webkit-text-fill-color:var(--main-white);
+    color: var(--main-black);
+    -webkit-text-stroke-width:1.5px;
+    font-size: 64px;
+    height: 86px;
+    font-weight: 700;
+    transform: rotate(-90deg);
+    margin-right: 1rem;
+}
+.case-studies-featured  .left-featured{
+    padding-top: 5rem;
+}
+.case-studies-featured  .right-featured{
+    padding-top: 5rem;
+}
+
+/************************************************* end case studies featured section ******************************************/
+
+/************************************************* start navbar example-studies hp-hero section *************************************/
+.case-nav-item a{
+    color: var(--main-black);
+}
+.case-example-btn{
+    color: var(--main-black);
+    background-color: transparent;
+    border: 2px solid;
+}
+.case-example-btn:hover{
+    color: var(--main-yellow);
+}
+
+/********* start case header **************/
+.case-header{
+    background-color: var(--main-white);
+}
+
+
+.case-header .nav-item a{
+    color: var(--main-black);
+}
+.case-header .nav-item a:hover{
+    color: var(--main-yellow);
+}
+
+.case-header  .btn-1{
+    background-color:transparent;
+    color: var(--main-black);
+    border: 2px solid var(--main-yellow);
+    border-radius: 2px;
+}
+.case-header .btn-1:hover{
+    /* background-color:var(--main-yellow); */
+    color: var(--main-White);
+    /* border: 2px solid var(--main-white); */
+}
+.case-header .btn{
+    transition: 00.3s;
+}
+/********* end case header ***************/
+/***************************************** start navbar example-studies hp-hero section *********************************/
+
+/************************************************* start case studies-example hero section ******************************************/
+.hp-hero-case-studies-example-section {
+    min-height: 766px;
+    background-color: var(--main-white);
+    z-index: 1;
+}
+
+.line-hint .line-case{
+    width:80px;
+    height:1.6px;
+    background-color: var(--main-black);
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.case-studies-example-hero-wrapper{
+    position: absolute;
+    top: 30%;
+}
+/****************************************** end case studies-example hero section **************************************/
+
+/************************************* start case studies example info hp-hero section **************************************/
+.hp-case-study-info{
+    min-height: 1790px;
+    background-color: var(--main-black);
+    position: relative;
+    z-index: 1;
+}
+.case-study-info-wrapper{
+    padding-top: 100px;
+}
+.case-stydy-info-main-img img{
+    margin-top: -300px;
+    
+}
+.case-stydy-info-main-res-img img{
+    display: none;
+}
+.case-study-info-wrapper .left-info dt{
+    color: var(--main-white);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.case-study-info-wrapper .left-info dd{
+    color: var(--light-dark);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.desc-text p{
+    color: var(--light-dark);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.ads-manager-box{
+  padding-top: 100px;
+}
+.squere-img{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: -1;
+}
+
+
+/************************************** end case studies example info hp-hero section ***********************************/
+
+/************************* start case study customer review ****************/
+.case-study-review {
+    min-height: 766px;
+    position: relative;
+    background-color: var(--ternary);
+}
+.case-study-review .carousel {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(60% - 60px);
+    transform: translateY(-50%);
+    padding: 0 15px;
+    
+}
+.case-study-review .customer-text{
+    font-size: 25px;
+}
+/******************* end case study customer review ********************/
+
+/********************* start analyze *********************/
+.hp-analyze-section{
+    /* min-height: 2500px; */
+    position: relative;
+    background-color: var(--main-black);
+    padding: 5rem 0;
+}
+.info-title-box{
+    display:flex;
+}
+.info-number .number{
+    -webkit-text-fill-color:var(--main-black);
+    color: var(--main-white) !important;
+    -webkit-text-stroke-width:1px;
+    font-size: 55px;
+    height: 86px;
+    font-weight: 700;
+    
+}
+ .info-box-title {
+    color: var(--main-white) !important;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 86px;
+    margin-left: 2rem;
+}
+
+.right-analyze h3{
+    color: var(--main-yellow);
+    font-size: 38px;
+    height: 86px;
+    font-weight: 600;
+}
+.border-bottom{
+    border: 1px solid var(--light-dark);
+    margin-bottom:7rem;
+}
+/********************* end analyze **********************/
+
+/********************** start case studies img section ******************/
+
+.case-studies-img-section{
+    background-color: var(--primary);
+    padding: 8rem 0;
+}
+
+/******************* end case studies img section ********************/
+
+/*********************** start optimize task section *******************/
+
+.optimize-task-section{
+    background-color:var(--main-black);
+    padding: 5rem 0;
+}
+
+/************************ end optimize task section **********************/
+
+/*************************************************** end case studies section section
+            ******************************************************************** ******************************************/
+
+/*************************************************** start blog section section
+            ******************************************************************** ******************************************/
+
+
+/************************************************* start blog hp-article section ******************************************/
+
+.hp-blog-section{
+    /* min-height:2500px; */
+    background-color: var(--main-black);
+    position:relative;  
+    z-index:1;
+    padding: 5rem 0;
+}
+.my-blog-Swiper .blog-box{
+    background-color: var(--primary);
+}
+.my-blog-Swiper .card-title{
+    font-size: 14px;
+    color: var(--main-yellow);
+    line-height: 30px;
+    font-weight: 400;
+}
+.my-blog-Swiper .block-title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 43px;
+    color: var(--main-white);
+}
+.my-blog-Swiper .block-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--light-dark);
+    line-height: 30px;
+}
+
+.hp-blog-section .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: var(--main-white);
+    opacity: 1;
+    background: var(--ternary);
+  }
+
+  .hp-blog-section  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: var(--main-yellow);
+  }
+
+
+/********************************* start article section ******************************/
+
+.hp-blog-article-section{
+    min-height: 2100px;
+    background-color: var(--main-black);
+    position: relative;
+    padding-top: 250px;
+}
+.blog-article-boxes{
+    background-color: var(--primary);
+}
+.blog-article-boxes .card-title{
+    color: var(--main-yellow);
+}
+.blog-article-boxes .text-title{
+    color: var(--main-white);
+    font-size: 24px;
+    line-height: 34px;
+    pad: 2rem 0;
+}
+.resorce{
+    font-size: 18px;
+    height: 34px;
+    color:var(--main-white)
+}
+.resorce span{
+    color: var(--main-yellow);
+}
+/********************************* end article section ******************************/
+
+/************************************************* end blog hp-article section ******************************************/
+
+
+
+/*************************************************** end blog section section
+            ******************************************************************** ******************************************/
