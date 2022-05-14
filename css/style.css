@@ -944,7 +944,7 @@ ol, ul {
  .case-studies-hero-wrapper .right-scroll {
     position: absolute;
     top:30%;
-    right: -280px;
+    right: -360px;
     display: flex;
     align-items: center;
     transform: rotate(90deg);
